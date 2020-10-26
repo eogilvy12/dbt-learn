@@ -1,0 +1,25 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'erin_learn_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'default'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  
+clean-targets:         
+    - "target"
+    - "dbt_modules"
+
+
+models:
+  erin_learn_project:
