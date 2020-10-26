@@ -21,15 +21,10 @@ models:
             - not_null
         
         - name: status
-          description: '{{ docs('order_status') }}'
+          description: '{{ doc("order_status") }}'
           tests:
             - accepted_values:
-                values:
-                    - completed
-                    - shipped
-                    - returned
-                    - placed
-                    - return_pending
+                values: ['completed', 'shipped', 'returned', 'placed', 'return_pending']
 
         - name: customer_id
           tests: 
