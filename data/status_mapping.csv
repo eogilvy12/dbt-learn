@@ -1,0 +1,6 @@
+status,mapped_value
+completed,completed
+shipped,completed 
+returned,completed 
+placed,pending 
+return_pending,pending
