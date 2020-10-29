@@ -8,26 +8,6 @@ with orders as (
 
 from {{ source('jaffle_shop','orders') }}
 
-),
-
-mapped_values as (
-
-    select * from {{ ref('status_mapping') }}
-
-),
-
-joined as (
-
-    select  
-        orders.*,
-        mapped_values.mapped_value,
-        case
-            when order.status in ('')
-            else 'pending'
-        end as mapped_value
-    from orders
-    left join mapped_values using (status)
-
 )
 
-select * from joined
+select * from orders
